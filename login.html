@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <link rel="stylesheet" href="login.css">
+    <!--font awesome cdn link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!--header section starts-->
+    <header>
+       
+    <a href="#" class="logo">Pharmacie<span>.</span></a>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+        <a href="reviews.html">review</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+<div class="icons">
+<a href="reviews.html" class="fas fa-heart"></a>
+<a href="products.html" class="fas fa-shopping-cart"></a>
+<a href="login.html" class="fas fa-user"></a>
+</div>
+    </header>
+
+
+    <div class="container">
+        <div class="main"> 
+            
+            <div class="login">
+                <form class="form">
+                    <label for="chk" aria-hidden="true">Log in</label>
+                <input class="input" type="email"
+                autocomplete="off" name="email"
+                placeholder="email" required="">
+                <input class="input" type="password"
+                 name="pswd"
+                placeholder="password" required="">
+                <button>Log in</button>
+                <div class="login_signup">Don't have an account? <a href="signup.html" id="signup">Signup</a></div>
+            </form>
+            </div>
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const form = document.querySelector(".form");
+        
+                    form.addEventListener("submit", function(event) {
+                        event.preventDefault();
+        
+                        const email = form.querySelector('input[name="email"]').value;
+                        const password = form.querySelector('input[name="pswd"]').value;
+        
+                        // Vérification des conditions de connexion ici
+                        if (email === "example@example.com" && password === "password") {
+                            // Si les conditions sont remplies, redirigez l'utilisateur vers la page d'accueil ou autre page appropriée
+                            window.location.href = "home.html";
+                        } else {
+                            // Sinon, affichez un message d'erreur ou une action appropriée
+                            alert("Email or password is incorrect. Please try again.");
+                        }
+                    });
+                });
+            </script>
+        </div>
+</body>
+</html>
